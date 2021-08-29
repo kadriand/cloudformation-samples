@@ -1,0 +1,10 @@
+version: '3.8'
+
+services:
+  demo-nginx:
+    container_name: demo_nginx
+    image: nginxdemos/hello
+    environment:
+      - "MY_VAR=db"
+    ports:
+      - 49153:80

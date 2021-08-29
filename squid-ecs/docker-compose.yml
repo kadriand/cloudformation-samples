@@ -1,0 +1,9 @@
+squid:
+  image: kadriand/squid-proxy
+  container_name: squidc
+  ports:
+    - 3128:3128
+  volumes:
+    - ./squid.conf:/etc/squid/squid.conf
+    - ./passwords:/etc/squid3/passwords
+  restart: always
